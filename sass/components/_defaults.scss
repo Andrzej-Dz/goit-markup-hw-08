@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: var(--color-standard);
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-standard);
+}
+
+img {
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+a,
+button,
+.team__white-circle,
+.foooter__circle,
+.our-customers__box2,
+.we-do__pictures,
+.sec-portf__pictures > div {
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--color-footer);
+  color: var(--color-standard);
+  padding: 60px 0px;
+}
+
+.main-container {
+  display: block;
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,71 @@
+@mixin display-row($gap) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin site() {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin circle($diameter-icon-social) {
+  @include display-row(10px);
+  width: $diameter-icon-social;
+  height: $diameter-icon-social;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@mixin white-circle($diameter-icon-social) {
+  display: flex;
+  width: $diameter-icon-social;
+  height: $diameter-icon-social;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: var(--color-icon);
+}
+
+@mixin circle-transform() {
+  background-color: var(--color-logo);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-function);
+}
+
+@mixin icon-social-media() {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+@mixin space-down() {
+  padding-bottom: var(--space1);
+}
+
+@mixin space() {
+  width: 1600;
+  border-bottom: 1px solid var(--color-horizont-line);
+}
+
+@mixin section-space() {
+  padding: 94px 0px;
+}
+
+@mixin pictures() {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+@mixin pictures-d-h() {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-function);
+}

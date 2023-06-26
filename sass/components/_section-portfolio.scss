@@ -1,0 +1,121 @@
+.sec-portf {
+  &__site {
+    @include site;
+  }
+
+  &__space {
+    @include space;
+  }
+
+  &__buttons {
+    padding-bottom: 50px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__pictures {
+    @include pictures;
+  }
+
+  &__picture {
+    width: 370px;
+    height: 294px;
+    margin: 0 auto;
+    background-color: #bdbdbd;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__pictures div div {
+    border: 1px solid var(--color-ramki-zdjec);
+  }
+
+  &__pictures > div:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--f-czasu);
+  }
+
+  &__pictures > div:hover .overlay,
+  &__pictures > div:focus .overlay {
+    transform: translatex(0%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--f-czasu);
+  }
+  // poniższy zapis nie działa dlatego ".overlay" jest poza {}
+  //   &__overlay-3 {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     transform: translatey(100%);
+  //     background-color: var(--color-logo);
+  //     transition: transform 250ms var(--f-czasu);
+  //   }
+
+  //   &__pictures > div:hover .overlay-3,
+  //   &__pictures > div:focus .overlay-3 {
+  //     transform: translatex(0%);
+  //     transition-property: transform;
+  //     transition-duration: 250ms;
+  //     transition-timing-function: var(--f-czasu);
+  //   }
+  //   &__overlay-3 p {
+  //     color: #fff;
+  //     padding: 49px 45px 49px 24px;
+  //     margin: 0;
+  //     font-weight: 400;
+  //     font-size: 18px;
+  //     letter-spacing: 0.03em;
+  //     color: #ffffff;
+  //   }
+  &__picture-title {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    color: #212121;
+  }
+
+  &__picture-describ {
+    padding-left: 24px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: #757575;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translatey(100%);
+  background-color: var(--color-logo);
+  transition: transform 250ms var(--f-czasu);
+}
+
+.overlay p {
+  padding: 49px 45px 49px 24px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: var(--color-standard);
+}

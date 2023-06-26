@@ -1,0 +1,73 @@
+.team {
+  @include section-space;
+
+  &__header {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--color-default);
+    padding-bottom: 50px;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__group > div {
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--color-standard);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &__group-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--color-default);
+    margin-top: 30px;
+  }
+
+  &__group-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+
+  &__icon-social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+    color: var(--color-icon);
+  }
+
+  &__white-circle {
+    @include white-circle(var(--diameter-icon-social));
+  }
+
+  &__white-circle:hover,
+  &__white-circle:focus {
+    background-color: var(--color-logo);
+    fill: var(--color-standard);
+    transition-property: fill, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--time-function);
+  }
+
+  &__icon-social-media {
+    @include icon-social-media;
+    color: var(--color-icon);
+  }
+}

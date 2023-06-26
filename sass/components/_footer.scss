@@ -1,0 +1,96 @@
+$xyz: 44px;
+
+.foooter {
+  display: flex;
+  padding: 0px 15px;
+  gap: 70px;
+
+  &__site {
+    @include site;
+  }
+
+  &__logo {
+    display: flex;
+    text-decoration: none;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: var(--color-logo);
+  }
+
+  &__logo-bottom {
+    color: var(--color-standard);
+  }
+
+  &__contact {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: var(--color-contact);
+  }
+
+  &__contact-address {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--color-standard);
+  }
+
+  &__contact-details {
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  }
+
+  &__join-us {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-standard);
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  &__icon-social-media {
+    @include icon-social-media;
+    fill: var(--color-standard);
+  }
+  &__circle {
+    @include circle(var(--diameter-icon-social));
+  }
+
+  &__circle:hover,
+  &__circle:focus {
+    @include circle-transform;
+  }
+
+  &__sign-up {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__newsletter {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(var(--shadow));
+    border-radius: 4px;
+    width: 358px;
+    height: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 15px 16px;
+  }
+}

@@ -1,0 +1,147 @@
+.form {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  gap: 10px;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+  &__field > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  &__field > div > svg {
+    position: absolute;
+    left: 15px;
+  }
+
+  &__field label,
+  &__field input,
+  &__field textarea {
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--color-contact);
+  }
+  &__field input,
+  &__field textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+  &__field input {
+    height: 40px;
+    padding-left: 45px;
+    padding-right: 15px;
+  }
+  &__field textarea {
+    height: 120px;
+    padding: 15px;
+    text-align: top left;
+    resize: none;
+  }
+
+  &__field input:focus,
+  &__field textarea:focus {
+    outline: none;
+  }
+
+  &__field > div:hover,
+  &__field > div:focus-within,
+  &__field input:hover,
+  &__field input:focus,
+  &__field textarea:hover,
+  &__field textarea:focus {
+    border-color: var(--color-logo);
+    fill: var(--color-logo);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--f-czasu);
+  }
+
+  &__regulation {
+    position: relative;
+    margin: 10px 10px 30px 10px;
+  }
+
+  &__regulation > label {
+    padding-left: 18px;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 24px;
+    color: var(--color-contact);
+  }
+
+  &__regulation a {
+    color: var(--color-logo);
+  }
+
+  &__checkbox-hidden,
+  &__checkbox-empty,
+  &__checkbox-accepted {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translatey(-50%);
+  }
+
+  &__checkbox-hidden {
+    opacity: 0;
+  }
+
+  &__checkbox-empty,
+  &__checkbox-accepted {
+    fill: var(--color-contact);
+    cursor: pointer;
+  }
+
+  &__checkbox-empty {
+    fill: var(--color-contact);
+  }
+
+  &__checkbox-empty:hover {
+    fill: var(--color-logo);
+  }
+
+  &__checkbox-accepted {
+    background-color: var(--color-logo);
+    fill: var(--color-standard);
+  }
+
+  &__checkbox-space {
+    margin-left: 8px;
+  }
+
+  &__checkbox-space {
+    margin-left: 8px;
+  }
+}
+.form,
+.form__field {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+input[type="checkbox"]:checked + svg.form__checkbox-accepted {
+  display: inline;
+}
+
+input[type="checkbox"]:not(:checked) ~ svg.form__checkbox-accepted {
+  display: none;
+}
+
+.akcept-regulamin > label:focus-within > form__checkbox-empty {
+  fill: var(--color-logo);
+}
