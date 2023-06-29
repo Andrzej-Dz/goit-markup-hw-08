@@ -9,10 +9,17 @@
 
   &__table-ipsum {
     display: flex;
+    @include set-flex-direction(column, column, column, row);
     justify-content: center;
     gap: 30px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  &__tablet {
+    display: flex;
+    @include set-flex-direction(column, column, row, row);
+    gap: 30px;
   }
 
   &__box {
@@ -33,6 +40,9 @@
     text-transform: uppercase;
     color: var(--color-default);
     margin-bottom: 10px;
+    @media screen and (min-width: 480px) {
+      text-align: center;
+    }
   }
 
   &__text {

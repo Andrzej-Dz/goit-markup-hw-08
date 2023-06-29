@@ -11,15 +11,16 @@
     align-items: center;
     padding-top: 24px;
     padding-bottom: 25px;
+    justify-content: flex-start;
   }
 
   &__logo {
+    @include set-font-size(24px, 24px, 24px, 26px);
     display: flex;
     text-decoration: none;
     font-family: "Raleway";
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
     line-height: 31px;
     letter-spacing: 0.03em;
     color: var(--color-logo);
@@ -35,6 +36,8 @@
 
   &__navigation {
     display: flex;
+    margin-left: 93px;
+    margin-right: auto;
   }
 
   &__link {
@@ -54,6 +57,14 @@
     transition-timing-function: var(--f-czasu);
   }
 
+  &__contacts {
+    display: flex;
+    @include set-flex-direction(row, row, column, row);
+    @include set-flex-gap(0, 0, 10px, 30px);
+    @include set-justify-content(flex-start, flex-start, flex-start, flex-end);
+    margin-right: 15px;
+  }
+
   &__contact {
     text-decoration: none;
     font-family: "Roboto";
@@ -63,12 +74,13 @@
     line-height: 16px;
     letter-spacing: 0.02em;
     color: var(--color-contact);
+    align-items: center;
   }
 
   &__contact-icon {
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
     fill: var(--color-contact);

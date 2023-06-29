@@ -1,12 +1,19 @@
-$xyz: 44px;
-
 .foooter {
   display: flex;
+  @include set-flex-direction(column, column, column, row);
   padding: 0px 15px;
   gap: 70px;
 
   &__site {
     @include site;
+  }
+
+  &__tablet {
+    display: flex;
+    align-items: inherit;
+    @include set-flex-direction(column, column, row, row);
+    justify-content: center;
+    @include set-foooter-gap();
   }
 
   &__logo {
@@ -15,7 +22,14 @@ $xyz: 44px;
     font-family: "Raleway";
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+    }
+    @media screen and (min-width: 1200px) {
+      justify-content: flex-start;
+      font-size: 26px;
+    }
     line-height: 31px;
     letter-spacing: 0.03em;
     color: var(--color-logo);
@@ -23,6 +37,18 @@ $xyz: 44px;
 
   &__logo-bottom {
     color: var(--color-standard);
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      align-items: center;
+    }
+    @media screen and (min-width: 1200px) {
+      align-items: flex-start;
+    }
   }
 
   &__contact {
@@ -51,15 +77,67 @@ $xyz: 44px;
   }
 
   &__join-us {
+    @media screen and (max-width: 320px) {
+      // display: flex;
+      // flex-direction: column;
+      // margin-left: auto;
+      // margin-right: auto;
+      // gap: 20px;
+    }
+    @media screen and (min-width: 480px) {
+      // display: flex;
+      // flex-direction: column;
+      // margin-left: auto;
+      // margin-right: auto;
+      // gap: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: block;
+      flex-direction: column;
+    }
+  }
+  // // =========================================
+  // &__center-mobile {
+  //   @media screen and (max-width: 480px) {
+  //     text-align: center;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //   }
+  // }
+  // // =========================================
+
+  &__join-us-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-standard);
-    margin-top: 12px;
-    margin-bottom: 20px;
+
+    // margin-left: auto;
+    // margin-right: auto;
+    // gap: 20px;
+    @media screen and (min-width: 480px) {
+      // margin-left: auto;
+      // margin-right: auto;
+      // gap: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-top: 5px;
+      gap: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-top: 12px;
+      margin-bottom: 20px;
+    }
   }
+
   &__icon-social-media {
     @include icon-social-media;
     fill: var(--color-standard);
@@ -74,21 +152,81 @@ $xyz: 44px;
   }
 
   &__sign-up {
-    display: flex;
-    gap: 12px;
+    @media screen and (max-width: 768px) {
+      // display: flex;
+      // justify-content: center;
+    }
+    @media screen and (min-width: 480px) {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // gap: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 12px;
+    }
   }
 
   &__newsletter {
+    @media screen and (max-width: 320px) {
+      // display: flex;
+      // flex-direction: column;
+      // margin-left: auto;
+      // margin-right: auto;
+      // gap: 20px;
+    }
+    @media screen and (min-width: 480px) {
+      // display: flex;
+      // flex-direction: column;
+      // margin-left: auto;
+      // margin-right: auto;
+      // gap: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: block;
+      flex-direction: column;
+      margin-left: 8px;
+    }
+  }
+
+  &__newsletter-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-standard);
+  }
+
+  &__newsletter-form {
+    display: flex;
+    align-items: center;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(var(--shadow));
     border-radius: 4px;
-    width: 358px;
+    width: 450px;
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
     height: 50px;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     padding: 15px 16px;

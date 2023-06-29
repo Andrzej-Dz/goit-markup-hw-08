@@ -13,6 +13,14 @@
 
   &__table {
     display: flex;
+    @include set-flex-direction(column, column, column, row);
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__tablet {
+    display: flex;
+    @include set-flex-direction(column, column, row, row);
     justify-content: center;
     gap: 30px;
   }

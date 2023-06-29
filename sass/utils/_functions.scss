@@ -6,9 +6,83 @@
 }
 
 @mixin site() {
-  width: 1200px;
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+@mixin set-font-size($s320, $s480, $s768, $s1200) {
+  font-size: $s320;
+  @media screen and (min-width: 480px) {
+    font-size: $s480;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: $s768;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: $s1200;
+  }
+}
+
+@mixin set-flex-direction($fd320, $fd480, $fd768, $fd1200) {
+  flex-direction: r$fd320;
+  @media screen and (min-width: 480px) {
+    flex-direction: $fd480;
+  }
+  @media screen and (min-width: 768px) {
+    flex-direction: $fd768;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: $fd1200;
+  }
+}
+
+@mixin set-flex-gap($fg320, $fg480, $fg768, $fg1200) {
+  gap: $fg320;
+  @media screen and (min-width: 480px) {
+    gap: $fg480;
+  }
+  @media screen and (min-width: 768px) {
+    gap: $fg768;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: $fg1200;
+  }
+}
+
+@mixin set-foooter-gap() {
+  gap: 14px;
+  @media screen and (min-width: 480px) {
+    gap: 14px;
+  }
+  @media screen and (min-width: 768px) {
+    gap: 144px;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 70px;
+  }
+}
+
+@mixin set-justify-content($jc320, $jc480, $jc768, $jc1200) {
+  justify-content: $jc320;
+  @media screen and (min-width: 480px) {
+    justify-content: $jc480;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: $jc768;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: $jc1200;
+  }
 }
 
 @mixin circle($diameter-icon-social) {
@@ -44,7 +118,7 @@
 }
 
 @mixin space-down() {
-  padding-bottom: var(--space1);
+  padding-bottom: 94px;
 }
 
 @mixin space() {
