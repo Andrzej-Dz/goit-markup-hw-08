@@ -8,12 +8,29 @@
     @include site;
   }
 
-  &__tablet {
-    display: flex;
-    align-items: inherit;
-    @include set-flex-direction(column, column, row, row);
+  // &__tablet {
+  //   display: flex;
+  //   align-items: inherit;
+  //   @include set-flex-direction(column, column, row, row);
+  //   justify-content: center;
+  //   @include set-foooter-gap();
+  // }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    gap: 60px;
+    @media screen and (min-width: 768px) {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto;
+    }
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto;
+      gap: 70px;
+    }
     justify-content: center;
-    @include set-foooter-gap();
   }
 
   &__logo {
@@ -23,6 +40,10 @@
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
+    line-height: normal;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
     @media screen and (min-width: 768px) {
       justify-content: center;
     }
@@ -30,7 +51,6 @@
       justify-content: flex-start;
       font-size: 26px;
     }
-    line-height: 31px;
     letter-spacing: 0.03em;
     color: var(--color-logo);
   }
@@ -42,7 +62,9 @@
   &__contacts {
     display: flex;
     flex-direction: column;
-
+    @media screen and (max-width: 768px) {
+      align-items: center;
+    }
     @media screen and (min-width: 768px) {
       align-items: center;
     }
@@ -85,11 +107,10 @@
       // gap: 20px;
     }
     @media screen and (min-width: 480px) {
-      // display: flex;
-      // flex-direction: column;
-      // margin-left: auto;
-      // margin-right: auto;
-      // gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
     @media screen and (min-width: 768px) {
       display: flex;
@@ -102,15 +123,6 @@
       flex-direction: column;
     }
   }
-  // // =========================================
-  // &__center-mobile {
-  //   @media screen and (max-width: 480px) {
-  //     text-align: center;
-  //     margin-left: auto;
-  //     margin-right: auto;
-  //   }
-  // }
-  // // =========================================
 
   &__join-us-title {
     font-weight: 700;
@@ -119,15 +131,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-standard);
-
-    // margin-left: auto;
-    // margin-right: auto;
-    // gap: 20px;
-    @media screen and (min-width: 480px) {
-      // margin-left: auto;
-      // margin-right: auto;
-      // gap: 20px;
-    }
+    // @media screen and (max-width: 768px) {
+    //   justify-content: center;
+    //   gap: 20px;
+    // }
     @media screen and (min-width: 768px) {
       margin-top: 5px;
       gap: 20px;
@@ -142,6 +149,7 @@
     @include icon-social-media;
     fill: var(--color-standard);
   }
+
   &__circle {
     @include circle(var(--diameter-icon-social));
   }
@@ -152,24 +160,19 @@
   }
 
   &__sign-up {
-    @media screen and (max-width: 768px) {
-      // display: flex;
-      // justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (max-width: 480px) {
+      // scroll
     }
     @media screen and (min-width: 480px) {
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // gap: 20px;
+      gap: 20px;
     }
     @media screen and (min-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       gap: 20px;
     }
     @media screen and (min-width: 1200px) {
-      display: flex;
       flex-direction: row;
       justify-content: flex-start;
       gap: 12px;
@@ -185,11 +188,10 @@
       // gap: 20px;
     }
     @media screen and (min-width: 480px) {
-      // display: flex;
-      // flex-direction: column;
-      // margin-left: auto;
-      // margin-right: auto;
-      // gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
     @media screen and (min-width: 768px) {
       display: flex;
@@ -205,12 +207,7 @@
   }
 
   &__newsletter-title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--color-standard);
+    @extend .foooter__join-us-title;
   }
 
   &__newsletter-form {

@@ -1,5 +1,7 @@
 .team {
   @include section-space;
+  padding-left: 15px;
+  padding-right: 15px;
 
   &__header {
     font-weight: 700;
