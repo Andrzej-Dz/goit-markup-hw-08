@@ -1,0 +1,50 @@
+(() => {
+  const mobileMenu = document.querySelector('.js-menu-container');
+  const openMenuBtn = document.querySelector('.js-open-menu');
+  const closeMenuBtn = document.querySelector('.js-close-menu');
+  // modal: document.querySelector('[data-modal]');
+
+  const toggleMenu = () => {
+    const isMenuOpen =
+      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+    mobileMenu.classList.toggle('is-open');
+
+    const scrollLockMethod = !isMenuOpen
+      ? 'disableBodyScroll'
+      : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body);
+  };
+
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtn.addEventListener('click', toggleMenu);
+
+  // Close the mobile menu on wider screens if the device orientation changes
+  // TU TEŻ ZMIENIŁEM 768 NA 480PX ale nic to nigdzie nie dało ---- co robi tu 768px ????
+  window.matchMedia('(min-width: 480px)').addEventListener('change', e => {
+    if (!e.matches) {
+      // modal.classList.remove('is-hidden');
+      return;
+    }
+    mobileMenu.classList.remove('is-open');
+    openMenuBtn.setAttribute('aria-expanded', false);
+    bodyScrollLock.enableBodyScroll(document.body);
+    // modal.classList.add('is-hidden');
+  });
+})();
+
+// =====================================================
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-modal-open]'),
+//     closeModalBtn: document.querySelector('[data-modal-close]'),
+//     modal: document.querySelector('[data-modal]'),
+//   };
+
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
+
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-hidden');
+//   }
+// })();

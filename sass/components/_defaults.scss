@@ -7,7 +7,7 @@
 body {
   background-color: var(--color-standard);
   text-decoration: none;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
 }
@@ -56,6 +56,8 @@ footer {
   // overflow-x: scroll;
   margin-left: auto;
   margin-right: auto;
+  // min-width: 320px;
+  // max-width: 480px;
   width: 320px;
 }
 
@@ -68,13 +70,14 @@ footer {
 @media screen and (min-width: 768px) {
   .main-container {
     width: 768px;
+    // max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .main-container {
     width: 1600px;
-    min-width: 1200px;
-    max-width: 1600px;
+    // min-width: 1200px;
+    // max-width: 1600px;
   }
 }

@@ -6,19 +6,22 @@
   }
 
   &__heading {
-    display: flex;
     background-color: var(--color-standard);
     align-items: center;
     padding-top: 24px;
     padding-bottom: 25px;
     justify-content: flex-start;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 
   &__logo {
     @include set-font-size(24px, 24px, 24px, 26px);
     display: flex;
     text-decoration: none;
-    font-family: "Raleway";
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     line-height: 31px;
@@ -67,7 +70,7 @@
 
   &__contact {
     text-decoration: none;
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -101,12 +104,23 @@
 
   &__link-activ::after {
     display: block;
-    content: "";
+    content: '';
     background: var(--color-logo);
     border-radius: 2px;
     width: 100%;
     height: 4px;
     position: absolute;
     top: 45px;
+  }
+
+  &__mobile-header {
+    display: flex;
+    padding: 16px 15px;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+      display: none;
+      align-items: left;
+    }
   }
 }
