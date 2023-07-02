@@ -23,8 +23,7 @@
     text-decoration: none;
     font-family: 'Raleway';
     font-style: normal;
-    font-weight: 700;
-    line-height: 31px;
+    font-weight: var(--fontweightsectiontitle);
     letter-spacing: 0.03em;
     color: var(--color-logo);
   }
@@ -46,7 +45,6 @@
   &__link {
     text-decoration: none;
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.02em;
     color: var(--color-default);
     position: relative;
@@ -72,9 +70,8 @@
     text-decoration: none;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--fontweighttitle);
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.02em;
     color: var(--color-contact);
     align-items: center;

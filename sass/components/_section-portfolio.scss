@@ -32,7 +32,7 @@
   }
 
   &__pictures div div {
-    border: 1px solid var(--color-ramki-zdjec);
+    border: 1px solid var(--color-picture-frame);
   }
 
   &__pictures > div:hover {
@@ -55,9 +55,8 @@
     padding-top: 20px;
     padding-left: 24px;
     padding-bottom: 4px;
-    font-weight: 700;
+    font-weight: var(--fontweightsectiontitle);
     font-size: 18px;
-    line-height: 36px;
     letter-spacing: 0.06em;
     color: #212121;
   }
@@ -65,9 +64,8 @@
   &__picture-describ {
     padding-left: 24px;
     padding-bottom: 20px;
-    font-weight: 400;
+    font-weight: var(--fontweightstandard);
     font-size: 16px;
-    line-height: 30px;
     letter-spacing: 0.03em;
     color: #757575;
   }
@@ -87,7 +85,7 @@
 .overlay p {
   padding: 49px 45px 49px 24px;
   margin: 0;
-  font-weight: 400;
+  font-weight: var(--fontstandard);
   font-size: 18px;
   letter-spacing: 0.03em;
   color: var(--color-standard);

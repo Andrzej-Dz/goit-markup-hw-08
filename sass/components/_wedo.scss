@@ -10,9 +10,8 @@
   }
 
   &__header {
-    font-weight: 700;
+    font-weight: var(--fontweightsectiontitle);
     font-size: 36px;
-    line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--color-default);
@@ -28,9 +27,8 @@
     top: -70px;
     width: 370px;
     background: rgba(47, 48, 58, 0.8);
-    font-weight: 700;
+    font-weight: var(--fontweightsectiontitle);
     font-size: 14px;
-    line-height: 16px;
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;

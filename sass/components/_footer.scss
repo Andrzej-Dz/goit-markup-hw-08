@@ -36,11 +36,10 @@
   &__logo {
     display: flex;
     text-decoration: none;
-    font-family: "Raleway";
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: normal;
     @media screen and (max-width: 768px) {
       justify-content: center;
     }
@@ -75,27 +74,25 @@
 
   &__contact {
     text-decoration: none;
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
+    font-weight: var(--fontweightsectiontitle);
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.02em;
     color: var(--color-contact);
   }
 
   &__contact-address {
     padding-top: 20px;
-    font-weight: 400;
+    font-weight: var(--fontweightstandard);
     font-size: 14px;
-    line-height: 24px;
     letter-spacing: 0.03em;
     color: var(--color-standard);
   }
 
   &__contact-details {
     letter-spacing: 0.03em;
-    font-weight: 400;
+    font-weight: var(--fontweightstandard);
   }
 
   &__join-us {
@@ -127,7 +124,6 @@
   &__join-us-title {
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-standard);
@@ -163,6 +159,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     @media screen and (max-width: 480px) {
       // scroll
     }
@@ -223,7 +220,6 @@
     height: 50px;
     font-weight: 400;
     font-size: 16px;
-    line-height: 20px;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     padding: 15px 16px;

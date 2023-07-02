@@ -1,7 +1,8 @@
 .form {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--fontweightstandard);
+
   justify-content: center;
   gap: 10px;
 
@@ -31,7 +32,6 @@
   &__field textarea {
     width: 100%;
     font-size: 12px;
-    line-height: 14px;
     letter-spacing: 0.01em;
     color: var(--color-contact);
   }
@@ -79,7 +79,6 @@
     padding-left: 18px;
     font-size: 14px;
     letter-spacing: 0.03em;
-    line-height: 24px;
     color: var(--color-contact);
   }
 
@@ -134,11 +133,11 @@
   align-items: start;
   width: 100%;
 }
-input[type="checkbox"]:checked + svg.form__checkbox-accepted {
+input[type='checkbox']:checked + svg.form__checkbox-accepted {
   display: inline;
 }
 
-input[type="checkbox"]:not(:checked) ~ svg.form__checkbox-accepted {
+input[type='checkbox']:not(:checked) ~ svg.form__checkbox-accepted {
   display: none;
 }
 

@@ -4,7 +4,6 @@
   &__header {
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--color-default);
@@ -26,13 +25,6 @@
     justify-content: center;
     gap: 30px;
   }
-
-  // &__tablet {
-  //   display: flex;
-  //   @include set-flex-direction(column, column, row, row);
-  //   justify-content: center;
-  //   gap: 30px;
-  // }
 
   &__box2 {
     display: flex;

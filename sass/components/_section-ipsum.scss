@@ -16,12 +16,6 @@
     padding-right: 15px;
   }
 
-  // &__tablet {
-  //   display: flex;
-  //   @include set-flex-direction(column, column, row, row);
-  //   gap: 30px;
-  // }
-
   &__grid {
     display: grid;
     grid-template-columns: auto;
@@ -41,7 +35,7 @@
   &__box {
     display: flex;
     height: 120px;
-    background: #f5f4fa;
+    background-color: var(--color-btn-not-activ);
     border-radius: 4px;
     margin-bottom: 30px;
     justify-content: center;
@@ -49,24 +43,25 @@
   }
 
   &__header {
-    font-weight: 700;
+    font-weight: var(--fontweightsectiontitle);
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-default);
     margin-bottom: 10px;
-    @media screen and (min-width: 480px) {
-      text-align: center;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: left;
     }
   }
 
   &__text {
-    font-weight: 400;
+    font-weight: var(--fontweightstandard);
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: var(--color-contact);
+    text-align: left;
   }
 
   &__icon {

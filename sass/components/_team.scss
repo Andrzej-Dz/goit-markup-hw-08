@@ -4,9 +4,8 @@
   padding-right: 15px;
 
   &__header {
-    font-weight: 700;
+    font-weight: var(--fontweightsectiontitle);
     font-size: 36px;
-    line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--color-default);
@@ -28,9 +27,8 @@
   }
 
   &__group-name {
-    font-weight: 500;
+    font-weight: var(--fontweighttitle);
     font-size: 16px;
-    line-height: 19px;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--color-default);
@@ -38,9 +36,8 @@
   }
 
   &__group-title {
-    font-weight: 400;
+    font-weight: var(--fontweightstandard);
     font-size: 16px;
-    line-height: 19px;
     text-align: center;
     letter-spacing: 0.03em;
     color: #757575;

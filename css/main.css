@@ -15,6 +15,9 @@
   --space1: 94px;
   --diameter-icon-social: 44px;
   --gap10: 10px;
+  --fontweightstandard: 400;
+  --fontweighttitle: 500;
+  --fontweightsectiontitle: 700;
 }
 
 * {
@@ -28,7 +31,7 @@ body {
   text-decoration: none;
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 500;
+  font-weight: var(--fontweighttitle);
 }
 
 table {
@@ -37,6 +40,7 @@ table {
 
 h1 {
   font-weight: 900;
+  font-size: 44px;
   line-height: 60px;
   text-align: center;
   letter-spacing: 0.06em;
@@ -193,7 +197,6 @@ footer {
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 0.8px;
   color: var(--color-default);
   text-decoration: none;
@@ -219,7 +222,6 @@ footer {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 22px;
   letter-spacing: 0.36px;
   color: var(--color-default);
   text-decoration: none;
@@ -276,8 +278,7 @@ footer {
   text-decoration: none;
   font-family: "Raleway";
   font-style: normal;
-  font-weight: 700;
-  line-height: 31px;
+  font-weight: var(--fontweightsectiontitle);
   letter-spacing: 0.03em;
   color: var(--color-logo);
 }
@@ -312,7 +313,6 @@ footer {
 .main-header__link {
   text-decoration: none;
   font-size: 14px;
-  line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--color-default);
   position: relative;
@@ -404,9 +404,8 @@ footer {
   text-decoration: none;
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 500;
+  font-weight: var(--fontweighttitle);
   font-size: 14px;
-  line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--color-contact);
   -webkit-box-align: center;
@@ -475,10 +474,7 @@ footer {
 }
 
 .poster {
-  max-width: 100%;
-  text-align: center;
   background-color: var(--kolor-stopka);
-  background-image: url("../images/tlo-480-400.png");
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tlo-480-400.png");
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tlo-480-400.png");
 }
@@ -496,7 +492,6 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   height: 400px;
 }
 .poster__site > h1 {
@@ -505,17 +500,19 @@ footer {
 
 @media screen and (min-width: 480px) {
   .poster {
-    background-image: url("../images/tlo-480-400.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tlo-480-400.png");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tlo-480-400.png");
   }
 }
 @media screen and (min-width: 768px) {
   .poster {
-    background-image: url("../images/tlo-768-400.png");
+    background-image: inear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tlo-768-400.png");
   }
 }
 @media screen and (min-width: 1200px) {
   .poster {
-    background-image: url("../images/tlo-1600-600.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tlo-1600-600.png");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tlo-1600-600.png");
   }
   .poster__site {
     height: 600px;
@@ -530,9 +527,8 @@ footer {
   padding-right: 15px;
 }
 .team__header {
-  font-weight: 700;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 36px;
-  line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-default);
@@ -582,18 +578,16 @@ footer {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team__group-name {
-  font-weight: 500;
+  font-weight: var(--fontweighttitle);
   font-size: 16px;
-  line-height: 19px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-default);
   margin-top: 30px;
 }
 .team__group-title {
-  font-weight: 400;
+  font-weight: var(--fontweightstandard);
   font-size: 16px;
-  line-height: 19px;
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
@@ -691,7 +685,6 @@ footer {
 .our-customers__header {
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-default);
@@ -832,7 +825,6 @@ footer {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
-  line-height: normal;
   letter-spacing: 0.03em;
   color: var(--color-logo);
 }
@@ -895,23 +887,21 @@ footer {
   text-decoration: none;
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 500;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 14px;
-  line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--color-contact);
 }
 .foooter__contact-address {
   padding-top: 20px;
-  font-weight: 400;
+  font-weight: var(--fontweightstandard);
   font-size: 14px;
-  line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--color-standard);
 }
 .foooter__contact-details {
   letter-spacing: 0.03em;
-  font-weight: 400;
+  font-weight: var(--fontweightstandard);
 }
 @media screen and (min-width: 480px) {
   .foooter__join-us {
@@ -955,7 +945,6 @@ footer {
 .foooter__join-us-title, .foooter__newsletter-title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-standard);
@@ -1019,6 +1008,9 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (min-width: 480px) {
   .foooter__sign-up {
@@ -1097,7 +1089,6 @@ footer {
   height: 50px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   padding: 15px 16px;
@@ -1113,9 +1104,8 @@ footer {
   height: 38px;
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 500;
+  font-weight: var(--fontweighttitle);
   font-size: 16px;
-  line-height: 26px;
   text-align: center;
   letter-spacing: 0.03em;
   background: var(--color-btn-not-activ);
@@ -1144,23 +1134,22 @@ footer {
   display: -ms-flexbox;
   display: flex;
   font-family: "Roboto";
-  font-weight: 700;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 16px;
   color: var(--color-standard);
   background-color: var(--color-logo);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
   border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: inline;
-  font-style: bold;
-  letter-spacing: 0.06em;
   width: 200px;
   height: 50px;
-  padding: 10px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.06em;
 }
 
 .btn-poster {
@@ -1168,22 +1157,21 @@ footer {
   display: -ms-flexbox;
   display: flex;
   font-family: "Roboto";
-  font-weight: 700;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 16px;
   color: var(--color-standard);
   background-color: var(--color-logo);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
   border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-style: normal;
-  line-height: 30px;
-  padding-left: 42px;
-  padding-right: 41px;
-  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   letter-spacing: 0.06em;
 }
 
@@ -1192,32 +1180,26 @@ footer {
   display: -ms-flexbox;
   display: flex;
   font-family: "Roboto";
-  font-weight: 700;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 16px;
   color: var(--color-standard);
   background-color: var(--color-logo);
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
   border-radius: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 24px;
-  font-style: bold;
-  letter-spacing: 0.06em;
   width: 200px;
   height: 50px;
-  padding-left: 42px;
-  fill: var(--color-standard);
-}
-.btn-sign__.icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  letter-spacing: 0.06em;
+  padding-left: 42px;
+  gap: 24px;
+}
+.btn-sign__icon {
   fill: var(--color-standard);
 }
 
@@ -1236,7 +1218,7 @@ footer {
 .form {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--fontweightstandard);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1283,7 +1265,6 @@ footer {
 .form__field label, .form__field input, .form__field textarea {
   width: 100%;
   font-size: 12px;
-  line-height: 14px;
   letter-spacing: 0.01em;
   color: var(--color-contact);
 }
@@ -1323,7 +1304,6 @@ footer {
   padding-left: 18px;
   font-size: 14px;
   letter-spacing: 0.03em;
-  line-height: 24px;
   color: var(--color-contact);
 }
 .form__regulation a {
@@ -1475,7 +1455,7 @@ input[type=checkbox]:not(:checked) ~ svg.form__checkbox-accepted {
   display: -ms-flexbox;
   display: flex;
   height: 120px;
-  background: #f5f4fa;
+  background-color: var(--color-btn-not-activ);
   border-radius: 4px;
   margin-bottom: 30px;
   -webkit-box-pack: center;
@@ -1486,25 +1466,26 @@ input[type=checkbox]:not(:checked) ~ svg.form__checkbox-accepted {
           align-items: center;
 }
 .section-ipsum__header {
-  font-weight: 700;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 14px;
-  line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-default);
   margin-bottom: 10px;
+  text-align: center;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .section-ipsum__header {
-    text-align: center;
+    text-align: left;
   }
 }
 .section-ipsum__text {
-  font-weight: 400;
+  font-weight: var(--fontweightstandard);
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--color-contact);
+  text-align: left;
 }
 .section-ipsum__icon {
   fill: var(--color-black);
@@ -1519,9 +1500,8 @@ input[type=checkbox]:not(:checked) ~ svg.form__checkbox-accepted {
   }
 }
 .we-do__header {
-  font-weight: 700;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 36px;
-  line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-default);
@@ -1541,9 +1521,8 @@ input[type=checkbox]:not(:checked) ~ svg.form__checkbox-accepted {
   top: -70px;
   width: 370px;
   background: rgba(47, 48, 58, 0.8);
-  font-weight: 700;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 14px;
-  line-height: 16px;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -1590,9 +1569,8 @@ input[type=checkbox]:not(:checked) ~ svg.form__checkbox-accepted {
 }
 .modal__header {
   margin-bottom: 12px;
-  font-weight: 700;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 20px;
-  line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-default);
@@ -1689,7 +1667,7 @@ input[type=checkbox]:not(:checked) ~ svg.form__checkbox-accepted {
   overflow: hidden;
 }
 .sec-portf__pictures div div {
-  border: 1px solid var(--color-ramki-zdjec);
+  border: 1px solid var(--color-picture-frame);
 }
 .sec-portf__pictures > div:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1719,18 +1697,16 @@ input[type=checkbox]:not(:checked) ~ svg.form__checkbox-accepted {
   padding-top: 20px;
   padding-left: 24px;
   padding-bottom: 4px;
-  font-weight: 700;
+  font-weight: var(--fontweightsectiontitle);
   font-size: 18px;
-  line-height: 36px;
   letter-spacing: 0.06em;
   color: #212121;
 }
 .sec-portf__picture-describ {
   padding-left: 24px;
   padding-bottom: 20px;
-  font-weight: 400;
+  font-weight: var(--fontweightstandard);
   font-size: 16px;
-  line-height: 30px;
   letter-spacing: 0.03em;
   color: #757575;
 }
@@ -1753,7 +1729,7 @@ input[type=checkbox]:not(:checked) ~ svg.form__checkbox-accepted {
 .overlay p {
   padding: 49px 45px 49px 24px;
   margin: 0;
-  font-weight: 400;
+  font-weight: var(--fontstandard);
   font-size: 18px;
   letter-spacing: 0.03em;
   color: var(--color-standard);
