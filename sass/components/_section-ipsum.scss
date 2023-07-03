@@ -9,7 +9,7 @@
 
   &__table-ipsum {
     display: flex;
-    @include set-flex-direction(column, column, column, row);
+    @include set-flex-direction(column, column, row);
     justify-content: center;
     gap: 30px;
     padding-left: 15px;

@@ -14,7 +14,7 @@
 
   &__group {
     display: flex;
-    @include set-flex-direction(column, column, column, row);
+    @include set-flex-direction(column, column, row);
     justify-content: center;
     gap: 30px;
   }
@@ -47,7 +47,7 @@
 
   &__tablet {
     display: flex;
-    @include set-flex-direction(column, column, row, row);
+    @include set-flex-direction(column, row, row);
     justify-content: center;
     gap: 30px;
   }

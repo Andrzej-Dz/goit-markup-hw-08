@@ -18,7 +18,7 @@
   }
 
   &__logo {
-    @include set-font-size(24px, 24px, 24px, 26px);
+    @include set-font-size(24px, 24px, 26px);
     display: flex;
     text-decoration: none;
     font-family: 'Raleway';
@@ -60,9 +60,9 @@
 
   &__contacts {
     display: flex;
-    @include set-flex-direction(row, row, column, row);
-    @include set-flex-gap(0, 0, 10px, 30px);
-    @include set-justify-content(flex-start, flex-start, flex-start, flex-end);
+    @include set-flex-direction(row, column, row);
+    @include set-flex-gap(0, 10px, 30px);
+    @include set-justify-content(flex-start, flex-start, flex-end);
     margin-right: 15px;
   }
 

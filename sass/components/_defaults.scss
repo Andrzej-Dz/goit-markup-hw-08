@@ -53,31 +53,26 @@ footer {
 
 .main-container {
   display: block;
-  // overflow-x: scroll;
+  overflow-x: scroll;
   margin-left: auto;
   margin-right: auto;
-  // min-width: 320px;
-  // max-width: 480px;
-  width: 320px;
+  width: 480px;
 }
 
 @media screen and (min-width: 480px) {
   .main-container {
-    width: 480px;
+    overflow-x: default;
   }
 }
 
 @media screen and (min-width: 768px) {
   .main-container {
     width: 768px;
-    // max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .main-container {
     width: 1600px;
-    // min-width: 1200px;
-    // max-width: 1600px;
   }
 }
