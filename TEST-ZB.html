@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <!-- HEAD -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test-zb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
+
+    <style>
+      .img {
+        width: 100%;
+      }
+
+      /* .img {
+        width: 2048px;
+      }
+      @media screen and (min-width: 512px) {
+        .img {
+          width: 400px;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .img {
+          width: 200px;
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        .img {
+          width: 100px;
+        }
+      } */
+    </style>
+  </head>
+
+  <!-- BODY -->
+  <body>
+    <!-- <div>
+      <p>Test1</p>
+      <img style="width:100%;"
+        srcset= "
+          ./images/product_designer-270.jpg 270w, 
+          ./images/product_designer-540.jpg 540w,
+          ./images/product_designer-1080.jpg 1080w 
+          " 
+        src="./images/product_designer-1080.jpg" 
+        alt="Designer"/>
+    </div> -->
+    <!-- <div>
+      <p>Test2</p>
+      <img
+        srcset="
+          ./images/product_designer-450-460.jpg 450w,
+          ./images/product_designer-354-374.jpg 354w,
+          ./images/product_designer-270-260.jpg 270w
+        "
+        sizes="
+        (min-width: 900px) 500px,        
+          (min-width: 800px) 400px,
+          (min-width: 700px) 200px,
+          (min-width: 600px) 100px, 
+          50px
+          "
+        src="./images/product_designer-450-460.jpg"
+        alt="Designer"
+      />
+    </div> -->
+
+    <div>
+      <!-- <picture>
+        <source
+          srcset="
+            ./images/product_designer-450-460@1.jpg 1x,
+            ./images/product_designer-450-460@2.jpg 2x
+          "
+          media="(min-width: 500px)"
+        />
+        <source
+          srcset="./images/product_designer-354-374.jpg"
+          media="(min-width: 400px)"
+        />
+        <source
+          srcset="./images/product_designer-270-260.jpg"
+          media="(min-width: 300px)"
+        />
+        <img src="./images/product_designer-450-460.jpg" alt="Cute puppy" />
+      </picture> -->
+
+      <picture>
+        <source
+          srcset="
+            ./images/product_designer-270-260.jpg,
+            ./images/product_designer-270-260@2.jpg 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/product_designer-354-374.jpg,
+            ./images/product_designer-354-374@2.jpg 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/product_designer-450-460.jpg,
+            ./images/product_designer-450-460@2.jpg 2x
+          "
+          media="(min-width: 480px)"
+        />
+        <img
+          src="./images/product_designer-450-460.jpg"
+          alt="product_designer"
+        />
+      </picture>
+    </div>
+  </body>
+</html>

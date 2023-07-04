@@ -19,7 +19,26 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="container">
-    <header class="main-header__space">
+    <header class="main-header">
+      <!-- ============================================================== -->
+      <div class="main-header__mobile-header">
+        <a class="main-header__logo" href="index.html">
+          <p>Web</p>
+          <p class="main-header__logo-top">Studio</p>
+        </a>
+        <!-- <div> -->
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_hamburger"></use>
+          </svg>
+        </button>
+        <!-- </div> -->
+      </div>
+      <!-- =================================================== -->
       <div class="main-header__site main-header__heading">
         <a
           class="main-header__logo main-header__logo-margin-left"
@@ -28,10 +47,10 @@
           <p>Web</p>
           <p class="main-header__logo-top">Studio</p>
         </a>
-        <nav class="main-header__navigation" style="padding-left: 93px">
+        <nav class="main-header__navigation">
           <a class="main-header__link" href="index.html">Agencja</a>
           <a
-            class="main-header__link main-header__link-activ"
+            class="main-header__link"
             href="portfolio.html"
             style="margin-left: 46px"
             >Portfolio</a
@@ -40,26 +59,24 @@
             >Kontakty</a
           >
         </nav>
-        <a
-          class="main-header__contact"
-          href="mailto:info@devstudio.com"
-          style="margin-left: 345px"
-        >
-          <div class="main-header__contact-icon">
-            <svg width="16" height="12">
-              <use href="./images/icons.svg#icon-mail-koperta"></use>
-            </svg>
-            <p>info@devstudio.com</p>
-          </div>
-        </a>
-        <a class="main-header__contact" href="#" style="margin-left: 30px">
-          <div class="main-header__contact-icon">
-            <svg width="10" height="16">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-            <p>+48 111 111 111</p>
-          </div>
-        </a>
+        <div class="main-header__contacts">
+          <a class="main-header__contact" href="mailto:info@devstudio.com">
+            <div class="main-header__contact-icon">
+              <svg width="16" height="12">
+                <use href="./images/icons.svg#icon-mail-koperta"></use>
+              </svg>
+              <p>info@devstudio.com</p>
+            </div>
+          </a>
+          <a class="main-header__contact" href="#">
+            <div class="main-header__contact-icon">
+              <svg width="10" height="16">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              <p>+48 111 111 111</p>
+            </div>
+          </a>
+        </div>
       </div>
     </header>
     <main class="sec-portf__site sec-portf__space">

@@ -2,6 +2,7 @@
   @include section-space;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: var(--color-btn-not-activ);
 
   &__header {
     font-weight: var(--fontweightsectiontitle);
@@ -19,7 +20,7 @@
     gap: 30px;
   }
 
-  &__group > div > div {
+  &__group > div {
     border-radius: 0px 0px 4px 4px;
     background-color: var(--color-standard);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -45,11 +46,33 @@
     margin-bottom: 16px;
   }
 
-  &__tablet {
-    display: flex;
-    @include set-flex-direction(column, row, row);
+  &__grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    @media screen and (min-width: 768px) {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+    }
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto;
+    }
     justify-content: center;
     gap: 30px;
+  }
+
+  &__image {
+    width: 450px;
+    height: 460px;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      height: 374px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      height: 260px;
+    }
   }
 
   &__icon-social-media {
